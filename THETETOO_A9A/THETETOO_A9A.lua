@@ -2,7 +2,7 @@ package.path = package.path .. ';.luarocks/share/lua/5.2/?.lua'
   ..';.luarocks/share/lua/5.2/?/init.lua'
 package.cpath = package.cpath .. ';.luarocks/lib/lua/5.2/?.so'
 
-require("./VIPTEAM/utils")
+require("./THETETOO_A9A/utils")
 
 local f = assert(io.popen('/usr/bin/git describe --tags', 'r'))
 VERSION = assert(f:read('*a'))
@@ -212,10 +212,10 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {	
- "broadcast",
-"lock_bot",
-"lock_join",
-"lock_tag",
+   "broadcast",
+ "lock_bot",
+ "lock_join",
+ "lock_tag",
 "lock_user",
 "banbot",
 "ar_help",
